@@ -1,11 +1,5 @@
 实现 Room 页面 UI
 
-## Send message
-
-绑定 keydown 事件：
-
-    on:keydown={handleKeydown}
-
 ## ChatGPT icon
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" fill="none" class="home_user-avtar__3QksJ">
