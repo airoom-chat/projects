@@ -1,3 +1,7 @@
+
+Sidebar 必须要有，无论是桌面还是手机端，用于呈现房间详细信息。
+
+
 [DaisyUI Drawer](https://daisyui.com/components/drawer/)很适合做 siderbar
 
 sidebar 在右边：
@@ -25,5 +29,7 @@ sidebar 在右边：
 
     <div class="drawer drawer-end lg:drawer-open">
 
+在大屏幕下，sidebar 高度超过了窗口高度，因此用 h-full 固定为视口高度：
 
+    <div class="drawer-side h-full">
 
