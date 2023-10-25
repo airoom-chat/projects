@@ -1,5 +1,10 @@
 实现 Room 页面 UI
 
+## 参考
+
+最初版本参考：[Building a Chat Interface using HTML and CSS - CSS Projects](https://www.scaler.com/topics/chat-interface-project-css/)
+
+
 ## ChatGPT icon
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" fill="none" class="home_user-avtar__3QksJ">
