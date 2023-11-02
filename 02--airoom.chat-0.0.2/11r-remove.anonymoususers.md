@@ -3,6 +3,8 @@
 
 在 AnonymousRooms，AnonymousSessions 中保存有 user uuid 即可。
 
+todo:
 
+    已经不再生成 AnonymousUsers 记录，因此可以删除该功能了。
 
 
