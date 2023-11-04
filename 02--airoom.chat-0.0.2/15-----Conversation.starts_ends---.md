@@ -48,5 +48,70 @@
 
 在客户端仍然可以使用流解码代码，解码结果就是send完整内容，只不过是字符串格式，使用 JSON.parse 转换一下就可以。
 
+```
+                    let newData = decoder.decode(value, {stream: !done});
+                    if (response.status === 300) {
+                      // The session closed, goto the new session.
+                      try {
+                        const msg = JSON.parse(newData);
+                        const new_session_uuid = msg.new_session;
+                        // goto new session
+                        window.location.href = `/r?uid=${user_uuid}&rid=${room_uuid}&sid=${new_session_uuid}`;
+                      } catch (e) {
+                        console.error('Error! JSON.parse failed: ', e);
+                      }
+                    }
+```
+
+### 更简单的方式
+
+直接使用json转换即可：
+
+```
+      if (response.status === 300) {
+        // The session closed, goto the new session.
+        try {
+          const sendInfo = await response.json();
+          const sid = sendInfo.new_session;
+          window.location.href = `/r?uid=${user_uuid}&rid=${room_uuid}&sid=${sid}`;
+        } catch (e) {
+          console.error('Error! JSON.parse failed: ', e);
+        }
+      }
+```
+
+
+## 测试1：手动修改 stat: 0 -> 1
+
+done.
+
+会话状态从开放（0）改为关闭（1），因为要批量将目前的会话全部关闭。另外更常见的是，用户浏览一个已经关闭的会话，再次发送信息。
+
+当用户发送消息，后端检测到 stat == 1，则：
+
+- 创建新会话，stat = 2
+- 创建新消息
+- 返回300，已经新的会话 uuid
+
+
+## 测试2：访问 stat==2 的会话
+
+done.
+
+会话长度到达阈值之后，继续的消息将跳转到新的会话，此时新会话的 stat == 2.
+
+- 删除消息
+- 修改会话状态 stat 2 -> 0
+
+说明：测试1和测试2可以反复测试，数据闭环，只涉及后端。
+
+
+## 测试3
+
+## 测试2
+
+## 测试2
+
+
 
 
