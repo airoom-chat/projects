@@ -40,5 +40,13 @@
 - 自动发起第一个AI消息请求
 
 
+## stream with send
+
+在消息接口，返回的是 stream，当要返回直接消息时，不是 res.write()，而是直接：
+
+    res.status(300).send({'stat': 1, 'new_session': '............'})
+
+在客户端仍然可以使用流解码代码，解码结果就是send完整内容，只不过是字符串格式，使用 JSON.parse 转换一下就可以。
+
 
 
