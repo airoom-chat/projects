@@ -1,4 +1,7 @@
 
+
+[PayPal Payments Standard Integration Guide](https://developer.paypal.com/api/nvp-soap/paypal-payments-standard/integration-guide/pps-integration/)
+
 先使用 button 收款，人工处理邮件
 
 再使用下面这个库：[paypal-js](https://github.com/paypal/paypal-js)
