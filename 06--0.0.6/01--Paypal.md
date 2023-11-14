@@ -9,7 +9,7 @@
 这里是一个例子：[svelte-paypal-js](https://github.com/paypal-examples/svelte-paypal-js)
 
 
-# Lemon Squeezy
+## Lemon Squeezy
 
 [基于Lemon Squeezy开发你的全球可用的会员功能](https://juejin.cn/post/7295613501342433299)
 
@@ -25,4 +25,10 @@ ORM - Prisma
 [nextjs-billing](https://github.com/lmsqueezy/nextjs-billing)
 
 
+## PayPal HTML buttons
 
+适合于只卖几种商品，没有购物车的情况，因此适合 Airoom。
+
+使用：[Buy Now](https://developer.paypal.com/api/nvp-soap/paypal-payments-standard/integration-guide/buy-now-step-1/)
+
+https://developer.paypal.com/api/nvp-soap/paypal-payments-standard/integration-guide/button-summary/
